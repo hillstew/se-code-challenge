@@ -2,6 +2,7 @@ import React, { useEffect, useState, Fragment } from 'react';
 import { Router, Link } from '@reach/router';
 import Comic from './Comic';
 import Search from './Search';
+import '../styles/app.css';
 
 const App = () => {
   const [comic, setLatestComic] = useState(null);
