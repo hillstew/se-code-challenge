@@ -33,9 +33,7 @@ const App = () => {
           <Search path='/search' />
           {comic && <Comic path='/' comic={comic} type={true} />}
         </Router>
-        {error && (
-          <p>There has been an error. Please try refreshing the page.</p>
-        )}
+        {error && <p>There has been an error. Please refresh the page.</p>}
       </main>
     </Fragment>
   );

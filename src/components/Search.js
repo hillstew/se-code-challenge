@@ -43,7 +43,7 @@ const Search = () => {
           <button className='searchSubmit'>Search</button>
         </div>
       </form>
-      {error && <p>There has been an error. Please try refreshing the page.</p>}
+      {error && <p>There has been an error. Please refresh the page.</p>}
       {searchComic && <Comic comic={searchComic} />}
     </Fragment>
   );
