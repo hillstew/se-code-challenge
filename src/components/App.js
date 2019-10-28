@@ -6,13 +6,16 @@ import '../styles/app.css';
 
 const App = () => {
   const [comic, setLatestComic] = useState(null);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     fetch('https://xkcd.now.sh/?comic=latest')
       .then(res => res.json())
       .then(data => {
         setLatestComic(data);
-      });
+        setError('');
+      })
+      .catch(error => setError(error));
   }, []);
 
   return (
@@ -30,6 +33,9 @@ const App = () => {
           <Search path='/search' />
           {comic && <Comic path='/' comic={comic} type={true} />}
         </Router>
+        {error && (
+          <p>There has been an error. Please try refreshing the page.</p>
+        )}
       </main>
     </Fragment>
   );

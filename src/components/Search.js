@@ -5,6 +5,7 @@ import '../styles/search.css';
 const Search = () => {
   const [searchComic, setComic] = useState(null);
   const [comicQuery, setComicQuery] = useState('');
+  const [error, setError] = useState('');
 
   const handleChange = event => {
     const { value } = event.target;
@@ -19,7 +20,9 @@ const Search = () => {
       .then(res => res.json())
       .then(data => {
         setComic(data);
-      });
+        setError('');
+      })
+      .catch(error => setError(error));
     setComicQuery('');
   };
 
@@ -40,6 +43,7 @@ const Search = () => {
           <button className='searchSubmit'>Search</button>
         </div>
       </form>
+      {error && <p>There has been an error. Please try refreshing the page.</p>}
       {searchComic && <Comic comic={searchComic} />}
     </Fragment>
   );
