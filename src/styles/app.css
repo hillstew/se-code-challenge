@@ -8,10 +8,14 @@
   src: url(./AirbnbCereal-Black.ttf);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #f0f1fa;
   color: #3b3b3b;
-  font-family: 'Cereal';
+  font-family: Cereal;
   padding: 20px;
 }
 
