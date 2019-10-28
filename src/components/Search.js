@@ -39,6 +39,8 @@ const Search = () => {
             name='comicQuery'
             type='number'
             className='searchInput'
+            min='1'
+            max='2219'
           />
           <button className='searchSubmit'>Search</button>
         </div>
