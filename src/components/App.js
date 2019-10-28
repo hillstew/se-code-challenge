@@ -1,5 +1,7 @@
 import React, { useEffect, useState, Fragment } from 'react';
+import { Router, Link } from '@reach/router';
 import Comic from './Comic';
+import Search from './Search';
 
 const App = () => {
   const [comic, setLatestComic] = useState(null);
@@ -14,8 +16,20 @@ const App = () => {
 
   return (
     <Fragment>
-      <nav className='appNav'></nav>
-      <main>{comic && <Comic path='/' comic={comic} type={true} />}</main>
+      <nav className='appNav'>
+        <Link to='/' className='latest'>
+          Latest
+        </Link>
+        <Link to='/search' className='search'>
+          Search
+        </Link>
+      </nav>
+      <main>
+        <Router>
+          <Search path='/search' />
+          {comic && <Comic path='/' comic={comic} type={true} />}
+        </Router>
+      </main>
     </Fragment>
   );
 };
