@@ -1,0 +1,33 @@
+@font-face {
+  font-family: 'Cereal-light';
+  src: url(./AirbnbCereal-Light.ttf);
+}
+
+@font-face {
+  font-family: 'Cereal';
+  src: url(./AirbnbCereal-Black.ttf);
+}
+
+body {
+  background-color: #f0f1fa;
+  color: #3b3b3b;
+  font-family: 'Cereal';
+  padding: 20px;
+}
+
+a[aria-current='page'] {
+  border-bottom: 4px solid tomato;
+}
+
+.latest {
+  margin-right: 20px;
+}
+
+.latest,
+.search {
+  border-bottom: 4px solid transparent;
+  color: #3b3b3b;
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
