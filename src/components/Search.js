@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from 'react';
 import Comic from './Comic';
+import '../styles/search.css';
 
 const Search = () => {
   const [searchComic, setComic] = useState(null);
