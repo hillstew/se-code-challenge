@@ -31,3 +31,8 @@ a[aria-current='page'] {
   text-decoration: none;
   transition-duration: 0.5s;
 }
+
+.latest:hover,
+.search:hover {
+  color: #0066cc;
+}
